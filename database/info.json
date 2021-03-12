@@ -1,0 +1,363 @@
+{
+    "regularCommands": {
+        "help": {
+    		"path":"commands/help/help.js",
+    		"shortDescription":"Displays help message.",
+    		"longDescription":"Displays help message.",
+    		"examples":"%help"
+    	},
+    	"commands":{
+    		"path":"commands/help/commands.js",
+    		"shortDescription":"Commands list.",
+    		"longDescription":"Commands list.",
+    		"examples":"%commands"
+    	},
+    	"cmds":{
+    		"path":"commands/help/commands.js",
+    		"alias":"commands"
+        },
+        "misc":{
+            "path":"commands/help/misc.js",
+            "shortDescription":"Miscellaneous commands.",
+            "longDescription":"Miscellaneous commands.",
+            "examples":"%misc"
+        },
+        "games":{
+            "path":"commands/help/games.js",
+            "shortDescription":"Games.",
+            "longDescription":"Games",
+            "examples":"%games"
+        },
+    	"mod":{
+    		"path":"commands/help/mod.js",
+    		"shortDescription":"Displays commands for server management.",
+    		"longDescription":"Displays commands for server management.",
+    		"examples":"%mod"
+    	},
+    	"utils":{
+    		"path":"commands/help/utils.js",
+    		"shortDescription":"Commands list for fun, useful commands!",
+    		"longDescription":"Commands list for fun, useful commands!",
+    		"examples":"%utils"
+    	},
+    	"util":{
+    		"path":"commands/help/utils.js",
+    		"alias":"utils"
+    	},
+    	"beans":{
+    		"path":"commands/bean_commands/beans.js",
+    		"shortDescription":"Displays bean wallet",
+    		"longDescription":"View yours or another user's bean wallet",
+    		"examples":"- %beans\n- %beans @user"
+    	},
+    	"give":{
+    		"path":"commands/bean_commands/give.js",
+    		"shortDescription":"Gives some of your beans to a user.",
+    		"longDescription":"Gives some of your beans to a user.",
+    		"examples":"%give @user 100"
+    	},
+    	"gift":{
+    		"path":"commands/bean_commands/give.js",
+    		"alias":"give"
+    	},
+    	"leaderboard":{
+    		"path":"commands/bean_commands/leaderboard.js",
+    		"shortDescription":"Displays the server leaderboard for top 10 richest users",
+    		"longDescription":"Displays the server leaderboard for top 10 richest users",
+    		"examples":"%leaderboard"
+    	},
+    	"lb":{
+    		"path":"commands/bean_commands/leaderboard.js",
+    		"alias":"leaderboard"
+    	},
+    	"global":{
+    		"path":"commands/bean_commands/global.js",
+    		"shortDescription":"Displays the global leaderboard for top 10 richest users",
+    		"longDescription":"Displays the global leaderboard for top 10 richest users",
+    		"examples":"%global"
+    	},
+    	"glb":{
+    		"path":"commands/bean_commands/global.js",
+    		"alias":"global"
+        },
+        "gb":{
+    		"path":"commands/bean_commands/global.js",
+    		"alias":"global"
+    	},
+    	"badges":{
+    		"path":"commands/bean_commands/badges.js",
+    		"shortDescription":"Displays all your badges",
+    		"longDescription":"Displays all your badges",
+    		"examples":"%badges"
+    	},
+    	"badge":{
+    		"path":"commands/bean_commands/badge.js",
+    		"shortDescription":"Displays info about a badge",
+    		"longDescription":"Displays info about a badge",
+    		"examples":"%badge Veteran"
+    	},
+    	"badgelist":{
+    		"path":"commands/bean_commands/badgelist.js",
+    		"shortDescription":"Displays ALL currently available badges",
+    		"longDescription":"Displays ALL currently available badges",
+    		"examples":"%badgelist"
+    	},
+    	"bl":{
+    		"path":"commands/bean_commands/badgelist.js",
+    		"alias":"badgelist"
+    	},
+    	"title":{
+    		"path":"commands/bean_commands/title.js",
+    		"shortDescription":"Sets your title",
+    		"longDescription":"Sets your title. Title is one of your badges you would like to display on your wallet. Title also changes your wallet color depending on the badge.",
+    		"examples":"%title Veteran"
+        },
+        "settitle": {
+            "path": "commands/bean_commands/title.js",
+            "alias": "title"
+        },
+        "daily":{
+            "path":"commands/bean_commands/daily.js",
+            "shortDescription":"Receive your daily spin to win beans! You have a chance to win another spin!",
+            "longDescription":"Receive your daily spin to win beans!",
+            "examples":"%daily"
+        },
+        "bet":{
+            "path":"commands/games/bet.js",
+            "shortDescription":"Bet your beans!",
+            "longDescription":"Bet your beans for a chance to get more! You can only bet on **h** or **s**. In the format %bet [amount] [choice]",
+            "examples":"%bet 100 h"
+        },
+        "play":{
+            "path":"commands/games/play.js",
+            "shortDescription":"Play a guessing game!",
+            "longDescription":"Play a guessing game to win beans with your range at the end (Can only choose 20, 50 or 100)!",
+            "examples":"- %play 100\n- %play 50\n- %play 20"
+        },
+        "8ball":{
+            "path":"commands/games/8ball.js",
+            "shortDescription":"Ask me any yes or no question!",
+            "longDescription":"Ask me any yes or no question!",
+            "examples":"- %8ball Should I sleep early today?\n- %choose Should I eat today?"
+        },
+        "pickup":{
+            "path":"commands/misc/pickup.js",
+            "shortDescription":"Trying to score one with someone? I got you covered ;).",
+            "longDescription": "Trying to score one with someone? I got you covered ;). Just type %pickup @user",
+            "examples": "- %pickup @user"
+        },
+        "autorole":{
+            "path":"commands/moderation/autorole.js",
+            "shortDescription": "Sets role to automatically assign to new users",
+            "longDescription": "Sets role to automatically assign to new users"
+        },
+        "purge":{
+            "path":"commands/moderation/purge.js",
+            "shortDescription":"Deletes the last x messages",
+            "longDescription":"Deletes the last x number of messages from the chat! If a user is specified after the number of messages to delete, it deletes the last x messages from that user only. In the case of messages older than 14 days, use `%xpurge`","examples":"- %purge 50\n- %purge 40 @user"
+        },
+        "xpurge":{
+            "path":"commands/moderation/xpurge.js",
+            "shortDescription":"Able to delete messages older than 14 days.",
+            "examples":"- %xpurge 75\n- %xpurge 75 @user"
+        },
+        "wel":{
+            "path":"commands/moderation/wel.js",
+            "shortDescription":"Changes welcome message's channel.",
+            "longDescription":"Sets the welcome channel to the current channel.",
+            "examples":"%wel"
+        },
+        "leave":{
+            "path":"commands/moderation/leave.js",
+            "shortDescription":"Changes leave message's channel.",
+            "longDescription":"Sets the leave channel to the current channel.",
+            "examples":"%leave"
+        },
+        "setwel":{
+            "path":"commands/moderation/setwel.js",
+            "shortDescription":"Sets server welcome message.",
+            "longDescription":"Sets the welcome message you want me to say when a user joins the server! You can add {user} to tag the user and {server} to mention the server.",
+            "examples":"%setwel Hello {user}! Welcome to {server}. Enjoy your stay."
+        },
+        "setleave":{
+            "path":"commands/moderation/setleave.js",
+            "shortDescription":"Sets server leave message.",
+            "longDescription":"Sets the leave message you want me to say when a user leaves the server. Also see %setwel.",
+            "examples":"%setleave Aww, **{user}** has left the server. You'll be missed :("
+        },
+        "delwel":{
+            "path":"commands/moderation/delwel.js",
+            "shortDescription":"Deletes the server welcome message.",
+            "longDescription":"Deletes the server welcome message.",
+            "examples":"%delwel"
+        },
+        "delleave":{
+            "path":"commands/moderation/delleave.js",
+            "shortDescription":"Deletes the server leave message.",
+            "longDescription":"Deletes the server leave message.",
+            "examples":"%delleave"
+        },
+        "welmsg":{
+            "path":"commands/moderation/welmsg.js",
+            "shortDescription":"Displays server welcome message.",
+            "longDescription":"Displays the current welcome message for the server if there is one.",
+            "examples":"%welmsg"
+        },
+        "leavemsg":{
+            "path":"commands/moderation/leavemsg.js",
+            "shortDescription":"Displays server leave message.",
+            "longDescription":"Displays the current leave message for the server if there is one.",
+            "examples":"%leavemsg"
+        },
+        "avatar":{
+            "path":"commands/misc/avatar.js",
+            "shortDescription":"Displays yours or another user's avatar",
+            "longDescription":"Displays yours or another user's avatar",
+            "examples":"- %avatar\n- %avatar @user"
+        },
+        "avi":{
+            "path":"commands/misc/avatar.js",
+            "alias":"avatar"
+        },
+        "link":{
+            "path":"commands/misc/link.js",
+            "shortDescription":"My invite link!",
+            "longDescription":"My invite link!",
+            "examples":"%link"
+        },
+        "invite":{
+            "path":"commands/misc/link.js",
+            "alias":"link"
+        },
+        "serverinfo":{
+            "path":"commands/misc/serverinfo.js",
+            "shortDescription":"Info on the server!",
+            "longDescription":"Info on the server!",
+            "examples":"- %serverinfo"
+        },
+        "userinfo":{
+            "path":"commands/misc/userinfo.js",
+            "shortDescription":"Info on a user in the server!",
+            "longDescription":"Info on a user in the server!",
+            "examples":"- %userinfo\n- %userinfo @user"
+        },
+        "choose":{
+            "path":"commands/misc/choose.js",
+            "shortDescription":"Randomly selects from listed choices separated by a comma!",
+            "longDescription":"Randomly selects from listed choices separated by a comma!",
+            "examples":"- %choose apples, bananas, dragon fruit"
+        },
+        "staff":{
+            "path":"commands/misc/staff.js",
+            "shortDescription":"Soy bot staff verification card!",
+            "longDescription":"Soy bot staff verification card!",
+            "examples":"- %staff\n- %staff @user"
+        },
+        "reverse":{
+            "path":"commands/misc/reverse.js",
+            "shortDescription":"Reverses your message!",
+            "longDescription":"Reverses your message!",
+            "examples":"- %reverse Hello World!"
+        },
+        "rabbit":{
+            "path":"commands/misc/rabbit.js",
+            "shortDescription":"Rabb.it link",
+            "longDescription":"Rabb.it link",
+            "examples":"%rabbit"
+        },
+        "exp00":{
+            "path":"commands/level/exp.js",
+            "shortDescription":"Turns earning exp on/off in the current channel.",
+            "longDescription":"Turns exp earning on or off for that channel. By default it is turned off.",
+            "examples":"%exp on\n- %exp off"
+        },
+        "level00":{
+            "path":"commands/level/level.js",
+            "shortDescription":"View yours or another user's level in the server.",
+            "longDescription":"View yours or another user's level, exp and rank on the server!",
+            "examples":"- %level\n- %level @user"
+        },
+        "levels00":{
+            "path":"commands/level/levels.js",
+            "shortDescription":"Level leaderboard!",
+            "longDescription":"Leaderboard for levels on the server. optional number after the command to show that page",
+            "examples":"- %levels\n- %levels 3"
+        },
+        "lvlmsg00":{
+            "path":"commands/level/lvlmsg.js",
+            "shortDescription":"Set/view the level up message.",
+            "longDescription":"Sets the level up message for the server. Use {user} to tag the user and {level} for the user's new level.",
+            "examples":"- %lvlmsg Woohoo! Congratz {user} on leveling up to **{level}**."
+        },
+        "clearexp00":{
+            "path":"commands/level/clearexp.js",
+            "shortDescription":"Clears the server exp or a specified user.",
+            "longDescription":"Clears the server exp. If a user is specified, only clears the user's exp. User can be their @user or simply their id.",
+            "examples":"- %clearexp\n- %clearexp @user"
+        },
+        "shop":{
+            "path":"commands/shop/shop.js",
+            "shortDescription":"Displays bean shop!",
+            "longDescription":"Displays the bean shop. Type `%buy <item>` to purchase an item.",
+            "examples":"%shop"
+        },
+        "buy":{
+            "path":"commands/shop/buy.js",
+            "shortDescription":"Purchases an item from the bean shop!",
+            "longDescription":"Purchases an item from the bean shop!",
+            "examples":"%buy"
+        },
+        "roleshop":{
+            "path":"commands/shop/rshop.js",
+            "shortDescription":"Displays server roles shop",
+            "longDescription":"Displays the Role Shop where members of the server can buy a server role with their beans!",
+            "examples":"%roleshop"
+        },
+        "rshop":{
+            "path":"commands/shop/rshop.js",
+            "alias":"roleshop"
+        },
+        "rs":{
+            "path":"commands/shop/rs.js",
+            "shortDescription":"Add/Remove a role from the role shop!",
+            "longDescription":"Add/Removes a role from the Roles Shop. You must be server admin and I must have permissions to give out the role. If you're adding to the shop you must specify \"add\", role_name, and price. If you're removing from the shop, you only specify \"remove\" and role_name",
+            "examples":"- %rs add <role> 1500\n- %rs remove role"
+        },
+        "rbuy00":{
+            "path":"commands/shop/rbuy.js",
+            "shortDescription":"Buys a role from the role shop with beans",
+            "longDescription":"Buys a role role from the role shop!",
+            "examples":"%rbuy my_role"
+        },
+        "giveaway00":{
+            "path":"commands/moderation/giveaway.js",
+            "shortDescription":"Starts a giveaway event for a certain duration",
+            "longDescription":"Starts a giveaway event for a specified duration in seconds and randomly selects a winner when the time is up. `%giveaway {time} {prize}` (Max of 12 hours/43200 seconds)",
+            "examples":"- %giveaway 60 Giftcard"
+        }
+    },
+    "staffCommands": {
+        "reload": ["commands/staff/reload.js", 2],
+        "logs": ["commands/staff/logs.js", 2],
+        "event": ["commands/staff/event.js", 2],
+        "give": ["commands/staff/give.js", 2],
+        "badge": ["commands/staff/badge.js", 2],
+        "users": ["commands/staff/users.js", 1],
+        "sgr": ["commands/staff/sgr.js", 2],
+        "ssr": ["commands/staff/ssr.js", 2],
+        "setcolor": ["commands/staff/setcolor.js", 2],
+        "setg": ["commands/staff/setg.js", 2],
+        "dm": ["commands/staff/dm.js", 2],
+        "say": ["commands/staff/say.js", 2],
+        "soyban": ["commands/staff/soyban.js", 2],
+        "banlist": ["commands/staff/banlist.js", 1],
+        "title": ["commands/staff/title.js", 2],
+        "addtrigger": ["commands/staff/addtrigger.js", 2],
+        "triggers": ["commands/staff/triggers.js", 2]
+    },
+    "staffMembers": {
+        "242346349859700736": 2,
+        "197478173015932928": 2,
+        "294712953314213888": 2
+    }
+}

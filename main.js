@@ -70,27 +70,6 @@ soy.on("message", message => {
         return;
     }
 
-    /* Commands to ignore lower case
-    * TODO: Terrible implementation - rework later
-    */
-   /* switch(message.content.split(" ")[0].toLowerCase()){
-        case `${normalPrefix}setwel`:
-        case `${normalPrefix}setleave`:
-        case `${normalPrefix}lvlmsg`:
-        case `${normalPrefix}reverse`:
-        case `${normalPrefix}giveaway`:
-        case `${staffPrefix}say`:
-        case `${staffPrefix}dm`:
-        case `${normalPrefix}reverse`:
-        case `${normalPrefix}choose`:
-        case `${staffPrefix}soyban`:
-        case `${normalPrefix}8ball`:
-            args = message.content.split(" ").slice(1).filter(char => {return char !== ""});
-            break;
-        default:
-            args = parts.slice(1).filter(char => {return char !== ""});
-            break;
-    }*/
     args = message.content.split(" ").slice(1).filter(char => {return char !== ""});
 
     if(!(command in info.regularCommands) && !(command in info.staffCommands)) return;
@@ -276,6 +255,7 @@ ie-bean*','Bean bean bean?!?!','*faints*','I love you too.','That moment when...
         return message.channel.send(tools.soyChoice(['What have I done D:', ';_;', 'How could you :(']))
     }
     
+    //Turns out people found this annoying
    /* if (chat.includes("❤")){
         let rand = tools.soyRandom(0, 3);
         //So its 1/3 chance to respond
