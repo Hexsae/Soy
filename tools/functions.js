@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 const levels = require("../database/levels.json");
+=======
+>>>>>>> 81ee908 (Fixes)
 const discord = require("discord.js");
 const fs = require("fs");
 const path = require("path");
@@ -31,6 +34,7 @@ class Tools{
             return(`${hours} hrs ${minutes} mins and ${seconds} secs`);
     }
 
+<<<<<<< HEAD
     static handleExp(guildId, user, userData){
         let expGained =  this.soyRandom(10, 16);
         let levelUp = false;
@@ -52,6 +56,8 @@ class Tools{
         return {levelUp: levelUp, newLevel: userData.level};
     }
 
+=======
+>>>>>>> 81ee908 (Fixes)
     static isAllowed(ctx, permission){
         if(!(ctx.guild.member(ctx.author).hasPermission(permission)) && !(ctx.author.id in config.staffMembers)){
          return false;

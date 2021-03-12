@@ -1,8 +1,13 @@
 const discord = require("discord.js");
 const path = require("path");
 const mainPath = path.join(__dirname, "../../database");
+<<<<<<< HEAD
 const fs = require("fs");
 let owners = ["242346349859700736", "197478173015932928"];
+=======
+const owners = require("../../settings.json").owners
+const fs = require("fs");
+>>>>>>> 81ee908 (Fixes)
 
 module.exports = {
     async start(data){
@@ -38,7 +43,10 @@ module.exports = {
                 beans = user.beans;
                 title = user.title || "---";
                 tcolor = user.tcolor || 0x32363B;
+<<<<<<< HEAD
                 let serverMembers, list =[];
+=======
+>>>>>>> 81ee908 (Fixes)
 
                 if (owners.includes(user.discordid)){
 
@@ -55,11 +63,21 @@ module.exports = {
                     globalRank = row.findIndex(element => {
                         return element.discordid === userToShow.id;
                     }) + 1;
+<<<<<<< HEAD
                 
                     serverMembers = data.message.channel.guild.members.fetch()
                         .then(mems => {
                             mems = mems.array();
                             list = [];
+=======
+                    console.log(1)
+                
+                    serverMembers = data.message.guild.members.fetch()
+                        .then(mems => {
+                            mems = mems.array();
+                            list = [];
+                            console.log(2)
+>>>>>>> 81ee908 (Fixes)
 
                             for(let x = 0; x < mems.length; x++){
                                 for(let y = 0; y < row.length; y++){
@@ -68,7 +86,10 @@ module.exports = {
                                     }
                                 }
                             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81ee908 (Fixes)
                             list.sort((a, b) => {
                                 return b.beans - a.beans;
                             })
@@ -76,7 +97,10 @@ module.exports = {
                             serverRank = list.findIndex(element => {
                                 return element.id === user.discordid;
                             }) + 1;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81ee908 (Fixes)
                             let embed = new discord.MessageEmbed()
                                 .setAuthor(userToShow.username, url = userToShow.avatarURL())
                                 .setTitle("Wallet")
@@ -87,7 +111,11 @@ module.exports = {
                                 .addField("Title", title, true);
                 
                             return data.message.channel.send({embed});
+<<<<<<< HEAD
                         })
+=======
+                        }).catch(console.error)
+>>>>>>> 81ee908 (Fixes)
                     return;
                 }
 
@@ -103,8 +131,11 @@ module.exports = {
                 .addField("Title", title, true);
 
             return data.message.channel.send({embed});
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> 81ee908 (Fixes)
         })
     }
 }

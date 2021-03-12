@@ -40,8 +40,11 @@ module.exports = {
                     .addField("Users", row.users, true)
                     .addField("Description", row.description, true);
                 return data.message.channel.send({embed});
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 81ee908 (Fixes)
             }
         })
 

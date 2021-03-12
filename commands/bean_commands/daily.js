@@ -4,6 +4,7 @@ const discord = require("discord.js");
 
 let timedUsers = {};
 const except = [""];
+<<<<<<< HEAD
 const dates = {
     Jan: 31,
     Feb: 29,
@@ -18,6 +19,8 @@ const dates = {
     Nov: 30,
     Dec: 31
 }
+=======
+>>>>>>> 81ee908 (Fixes)
 
 module.exports = {
     start(data){
@@ -27,7 +30,10 @@ module.exports = {
         let choice = tools.soyRandom(0, 101);
 
         data.db.serialize(() => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81ee908 (Fixes)
             data.db.run("INSERT OR IGNORE INTO userdata (discordId, name, beans) VALUES" +
                     " (?, ?, '0')", [data.message.author.id, data.message.author.tag], (err, row) => {
                     if(err) console.log("--ERROR in %daily:  " + err);
@@ -49,6 +55,7 @@ module.exports = {
                         return data.message.channel.send({embed});
                     }
                 }
+<<<<<<< HEAD
 
                 //row.lastDaily = row.lastDaily.split(" ")
 
@@ -59,13 +66,26 @@ module.exports = {
                 //if(data.message.author.id === '242346349859700736') dailyCoupon = true
         
                 if (choice <= 45) prize = 40; //
+=======
+        
+                timedUsers[data.message.author.id] = Date.now();
+                let dailyCoupon = false;
+                
+                if (choice <= 45) prize = 40;
+>>>>>>> 81ee908 (Fixes)
                 else if (choice >= 45 && choice < 74) {
                     prize = 40;
                     dailyCoupon = true;
                 }
+<<<<<<< HEAD
                 else if (choice >= 74 && choice < 94) prize = 100; //was 75
                 else if (choice >= 94 && choice < 100) prize = 250; //was 150
                 else prize = 500; //was 300
+=======
+                else if (choice >= 74 && choice < 94) prize = 100;
+                else if (choice >= 94 && choice < 100) prize = 250;
+                else prize = 500; 
+>>>>>>> 81ee908 (Fixes)
 
                 row.badges = JSON.parse(row.badges) || [];
 
@@ -101,9 +121,14 @@ module.exports = {
                         `${choice}. You win **${prize} beans**!`);
                     data.message.channel.send({embed});
                 }
+<<<<<<< HEAD
         
             })
         })
 
+=======
+            })
+        })
+>>>>>>> 81ee908 (Fixes)
     }
 };

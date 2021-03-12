@@ -1,5 +1,8 @@
 const discord = require("discord.js");
+<<<<<<< HEAD
 const { deflateRawSync } = require("zlib");
+=======
+>>>>>>> 81ee908 (Fixes)
 const tools = require("../../tools/functions.js");
 
 module.exports = {

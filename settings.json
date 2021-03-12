@@ -1,8 +1,15 @@
 {
     "owners": [
+<<<<<<< HEAD
         "242346349859700736", "197478173015932928", "280997542362087424", "294712953314213888"
     ],
     "token": "MjY4NDc5MjMyNzMxMTE5NjE3.DLotzg.aePIruijRd3l1Zq-KcfKO2iQ4DY",
     "normalPrefix": "%",
     "staffPrefix": "+"
+=======
+    ],
+    "token": "",
+    "normalPrefix": "",
+    "staffPrefix": ""
+>>>>>>> 81ee908 (Fixes)
 }

@@ -116,12 +116,15 @@ module.exports = {
 
             data.db.run("UPDATE userdata SET name = ?, beans = ?, badges = ? WHERE discordId = ?",
                 [data.message.author.tag, prize, JSON.stringify(person.badges), data.message.author.id]);
+<<<<<<< HEAD
 
 //Log data into Betting Logs.txt
             /*fs.appendFile('./Logs/Betting Logs.txt', `----Logged Bet [ ${new Date().toString().split('(')[0]}]----\r\n\
 User: ${author.tag} [${author.id}]\r\n\
 Bet Amount: ${amount}\r\n\
 Outcome: ${outcome}\r\n\r\n`, err => {});*/
+=======
+>>>>>>> 81ee908 (Fixes)
         });
     }
 };
