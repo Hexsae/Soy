@@ -72,14 +72,6 @@ module.exports = {
                     return data.message.channel.send({embed});
                 }
             });
-<<<<<<< HEAD
-
-        })
-
-    }
-
-=======
         })
     }
->>>>>>> 81ee908 (Fixes)
 };

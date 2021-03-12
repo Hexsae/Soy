@@ -38,11 +38,7 @@ module.exports = {
         }
 
         mg2 = mg2.array()[0];
-<<<<<<< HEAD
-        if (Number(mg2.content) === variable || mg2.author.id === '242346349859700736') {
-=======
         if (Number(mg2.content) === variable) {
->>>>>>> 81ee908 (Fixes)
             if (choice === 100) {
                 data.db.run("INSERT OR IGNORE INTO UserData (discordid, beans)"+
                     `VALUES(?, '0')`, [data.message.author.id]);

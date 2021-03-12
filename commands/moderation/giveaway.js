@@ -16,9 +16,7 @@ module.exports = {
                 .setDescription("You must be server admin to start/end a giveaway.");
             return data.message.channel.send({embed});
         }*/
-        if (!(data.message.author.id === "197478173015932928")){
-            return;
-        }
+/*
 
         if (data.args.length < 2){
             embed.setColor("RED")
@@ -92,6 +90,6 @@ module.exports = {
                 description: `Your giveaway in **${data.message.guild.name}** has ended! The winner was: ${winner.username}`,
                 color: 3447003
             }})
-        }, time*1000);
+        }, time*1000);*/
     }
 }
