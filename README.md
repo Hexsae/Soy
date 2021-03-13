@@ -1,7 +1,8 @@
 # Soy
-Soy discord bot!
+Soy bot for Discord!
 
 ## Pre-req
+
 - [Nodejs](https://nodejs.org/en/download/) installed.
 
 - discord.js.
