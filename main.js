@@ -29,7 +29,7 @@ soy.on("ready", async () => {
     //Update Game status every 5 minutes
      setInterval(() => {
 		db.all("SELECT * FROM userdata;", (err, rows) => {
-			soy.user.setPresence({ activity: { name: `%help | ${rows.length} bean users`, type: 0 } });
+			soy.user.setPresence({ activity: { name: `${settings.normalPrefix}help | ${rows.length} bean users`, type: 0 } });
     })}, 300000);
 })
 
