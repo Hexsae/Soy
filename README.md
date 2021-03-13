@@ -21,3 +21,7 @@ After the above steps have been completed, you can begin setting up the informat
 - **Token**: You can find this in the [Discord developers page](https://discord.com/developers/applications) ![image](https://cdn.discordapp.com/attachments/795052462355644426/820179974097993749/unknown.png)
 - **Normal prefix** and **Staff prefix**: The prefix you would like to have your bot respond to. Staff prefix will only work for owners.
 
+## Example commands
+![command](https://cdn.discordapp.com/attachments/795052462355644426/820351262838226954/unknown.png)
+
+Use <prefix>help for command list!
